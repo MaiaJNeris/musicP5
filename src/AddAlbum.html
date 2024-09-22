@@ -29,7 +29,7 @@
                 <button class="flex row-auto justify-between w-full items-center">
                     <div class="flex row-auto justify-between space-x-6 items-center">
                         <!-- IMG ROUNDED -->
-                        <img src="./asset/perfil.jpg" alt="Nombre del usuario" class="w-12 h-12 rounded-full">
+                        <img src="../asset/perfil.jpg" alt="Nombre del usuario" class="w-12 h-12 rounded-full">
                         <!-- NAME FROM USER -->
                         <h3 class="text-indigo-800">Maia N J</h3>
                     </div>
@@ -53,7 +53,7 @@
                     <!-- Log out con ícono a la derecha -->
                     <div class="flex items-center space-x-4">
                         <i class="fa-solid fa-right-from-bracket text-indigo-800"></i>
-                        <li class="py-2"><a href="#" class="text-indigo-800 hover:no-underline">Log out</a></li>
+                        <li class="py-2"><a href="./login.html" class="text-indigo-800 hover:no-underline">Log out</a></li>
                     </div>
                 </ul>
             </nav>
@@ -61,31 +61,24 @@
 
         <!-- background -->
         <div class="flex-1 flex items-center justify-center bg-violet-900">
-            <!-- Card from Disc -->
+            <!-- Card from form -->
             <div class="p-4 bg-white rounded shadow w-1/2"> <!-- Recordar tamaño ajustado al 50% del contenedor -->
-
                 <h3 class="text-xl font-semibold mb-4">Nuevo Album</h3>
-                <p class="mb-2">Take on Me es una canción de la banda noruega A-ha, grabada en el single del mismo nombre lanzado por primera vez
-                    en 1984, pero de la que es más conocida la versión remasterizada comercializada entre 1985 y 1986 . La canción
-                    fue extraída del álbum Hunting High and Low, lanzado en 1985.
-                </p>
-                <!-- lista ul>li para escuchar -->
-                <ul>
-                    <li class="flex justify-between items-center mb-2">
-                        <span>Canción 0</span>
-                        <a href="#" class="bg-[#380a56] text-white px-3 py-1 rounded-md hover:bg-[#4b1e7a] transition-colors">Escuchar</a>
-                    </li>
-                    <li class="flex justify-between items-center mb-2">
-                        <span>Canción 1</span>
-                        <a href="#" class="bg-[#380a56] text-white px-3 py-1 rounded-md hover:bg-[#4b1e7a] transition-colors">Escuchar</a>
-                    </li>
-                    <li class="flex justify-between items-center mb-2">
-                        <span>Canción 2</span>
-                        <a href="#" class="bg-[#380a56] text-white px-3 py-1 rounded-md hover:bg-[#4b1e7a] transition-colors">Escuchar</a>
-                    </li>
-                </ul>
-                
-                
+                <form action="#" method="post">
+                    <label for="titulo" class="block mb-2">Título:</label>
+                    <input type="text" id="titulo" name="titulo" class="border border-gray-300 rounded w-full p-2 mb-4" required>
+
+                    <label for="anio" class="block mb-2">Año de lanzamiento:</label>
+                    <input type="number" id="anio" name="anio" min="1900" max="2100" class="border border-gray-300 rounded w-full p-2 mb-4" required>
+
+                    <label for="descripcion" class="block mb-2">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" cols="50" class="border border-gray-300 rounded w-full p-2 mb-4" required></textarea>
+
+                    <label for="imagen" class="block mb-2">Imagen (Archivo):</label>
+                    <input type="file" id="imagen" name="imagen" class="border border-gray-300 rounded w-full p-2 mb-4" accept="image/*" required>
+
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded bg-violet-900 hover:bg-violet-400 transition-colors w-full rounded-full my-4" type="submit">Agregar Album</button>
+                </form>
             </div>
         </div>
     </div>
