@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./asset/icons8-80s-music-48.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <!-- GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <title>Login</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="flex h-screen">
+        <!-- background -->
+        <div class="flex-1 flex items-center justify-center bg-violet-900">
+            <!-- Card from login -->
+            <div class="p-8 bg-white rounded shadow w-1/3">
+                <h3 class="text-2xl font-semibold mb-6">Log in</h3>
+            
+                <form action="#" method="post">
+                    <input type="email" id="mail" placeholder="example@e-mail.com" name="mail" required class="border border-gray-300 rounded w-full p-2 mb-4">
+            
+                    <input type="password" id="password" placeholder="password" name="password" required class="border border-gray-300 rounded w-full p-2 mb-4">
+            
+                    <!-- Section Buttons -->
+                    <button class="w-full py-2 rounded-full text-white" style="background-color: #380a56; border: 1px solid #380a56;">Login</button>
+
+                    <!-- Linea botones  -->
+                    <div class="flex items-center my-4">
+                        <div class="flex-1 border-t border-gray-300"></div>
+                        <p class="mx-2">o</p>
+                        <div class="flex-1 border-t border-gray-300"></div>
+                    </div>
+            
+                    <!-- Botón de Google con la misma estética -->
+                    <button class="w-full py-2 mt-4 rounded-full border border-[#380a56] text-[#380a56] hover:bg-[#380a56] hover:text-white transition flex items-center justify-center" style="background-color: rgba(56, 10, 86, 0.16);">
+                        <i class="fab fa-google mr-2 text-white"></i>
+                        Registrarse con Google
+                    </button>
+                </form>
+            
+                <div class="text-center mt-4">
+                    <p>¿Aún no sos miembro?</p>
+                    <a href="singUp.html" class="text-violet-400 hover:underline">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
