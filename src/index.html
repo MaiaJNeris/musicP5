@@ -14,8 +14,7 @@
     <!-- GoogleFonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <title>Agregar Album</title>
@@ -69,15 +68,16 @@
                     en 1984, pero de la que es más conocida la versión remasterizada comercializada entre 1985 y 1986 . La canción
                     fue extraída del álbum Hunting High and Low, lanzado en 1985.
                 </p>
+
                 <!-- list ul>li LISTEN  -->
                 <ul class="my-4">
                     <li class="flex justify-between items-center mb-2">
                         <span>Take on me</span>
-                        <a href="https://www.youtube.com/watch?v=djV11Xbc914"  target="_blank"class="bg-[#380a56] text-white px-3 py-1 rounded-md hover:bg-[#4b1e7a] transition-colors">Escuchar</a>
+                        <a href="https://www.youtube.com/watch?v=djV11Xbc914" target="_blank" class="bg-[#380a56] text-white px-3 py-1 rounded-md hover:bg-[#4b1e7a] transition-colors">Escuchar</a>
                     </li>
                     <li class="flex justify-between items-center mb-2">
                         <span>Stay on These Roads</span>
-                        <a href="https://www.youtube.com/watch?v=ZW4K24nMkwo"  target="_blank" class="bg-[#380a56] text-white px-3 py-1 rounded-md hover:bg-[#4b1e7a] transition-colors">Escuchar</a>
+                        <a href="https://www.youtube.com/watch?v=ZW4K24nMkwo" target="_blank" class="bg-[#380a56] text-white px-3 py-1 rounded-md hover:bg-[#4b1e7a] transition-colors">Escuchar</a>
                     </li>
                     <li class="flex justify-between items-center mb-2">
                         <span>Crying in the Rain</span>
@@ -85,46 +85,63 @@
                     </li>
                 </ul>
 
-                 <!-- ALBUM GRID  -->
-                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-5xl">
+                <!-- ALBUM GRID -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-5xl">
                     <!-- Album 1 -->
                     <div class="bg-white rounded shadow p-4">
-                        <img src="../asset/huntingHighAndLow.jpg" alt="Hunting High And Low"
-                            class="w-full h-48 object-cover rounded-md mb-4">
+                        <img src="../asset/huntingHighAndLow.jpg" alt="Hunting High And Low" class="w-full h-48 object-cover rounded-md mb-4">
                         <h3 class="text-lg font-semibold">Hunting High And Low</h3>
                         <p>Año: 1985</p>
-                        <button class="bg-red-600 text-white px-3 py-1 rounded-md mt-2 flex items-center">
-                            <i class="fas fa-trash mr-2"></i> Eliminar
-                        </button>
+                        <div class="flex justify-between mt-2">
+                            <button class="bg-red-600 text-white px-3 py-1 rounded-md flex items-center">
+                                <i class="fas fa-trash mr-2"></i> 
+                                <p>Delete</p>
+                            </button>
+                            <button id="edit-album-btn" class="bg-indigo-600 text-white px-3 py-1 rounded-md flex items-center">
+                                <i class="fas fa-edit mr-2"></i> 
+                                <p>Edit</p>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Album 2 -->
                     <div class="bg-white rounded shadow p-4">
-                        <img src="../asset/underTheMakeup.jpg" alt="Under The Makeup"
-                            class="w-full h-48 object-cover rounded-md mb-4">
+                        <img src="../asset/underTheMakeup.jpg" alt="Under The Makeup" class="w-full h-48 object-cover rounded-md mb-4">
                         <h3 class="text-lg font-semibold">Under The Makeup</h3>
                         <p>Año: 2015</p>
-                        <button class="bg-red-600 text-white px-3 py-1 rounded-md mt-2 flex items-center">
-                            <i class="fas fa-trash mr-2"></i> Eliminar
-                        </button>
+                        <div class="flex justify-between mt-2">
+                            <button class="bg-red-600 text-white px-3 py-1 rounded-md flex items-center">
+                                <i class="fas fa-trash mr-2"></i>
+                                <p>Delete</p> 
+                            </button>
+                            <button id="edit-album-btn" class="bg-indigo-600 text-white px-3 py-1 rounded-md flex items-center">
+                                <i class="fas fa-edit mr-2"></i> 
+                                <p>Edit</p>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Album 3 -->
                     <div class="bg-white rounded shadow p-4">
-                        <img src="../asset/castInSteel.jpg" alt="Cast In Steel"
-                            class="w-full h-48 object-cover rounded-md mb-4">
+                        <img src="../asset/castInSteel.jpg" alt="Cast In Steel" class="w-full h-48 object-cover rounded-md mb-4">
                         <h3 class="text-lg font-semibold">Cast In Steel</h3>
                         <p>Año: 2015</p>
-                        <button class="bg-red-600 text-white px-3 py-1 rounded-md mt-2 flex items-center">
-                            <i class="fas fa-trash mr-2"></i> Eliminar
-                        </button>
+                        <div class="flex justify-between mt-2">
+                            <button class="bg-red-600 text-white px-3 py-1 rounded-md flex items-center">
+                                <i class="fas fa-trash mr-2"></i> 
+                                <p>Delete</p>
+                            </button>
+                            <button id="edit-album-btn" class="bg-indigo-600 text-white px-3 py-1 rounded-md flex items-center">
+                                <i class="fas fa-edit mr-2"></i> 
+                                <p>Edit</p>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                
-                
             </div>
         </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
+
 </html>
