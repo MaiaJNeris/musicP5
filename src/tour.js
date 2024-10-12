@@ -1,7 +1,7 @@
 // Pedir el nombre usuario
 let usuarioName = solicitarNombre();
 
-//Venta ticket 
+//Venta ticket y location
 let tickets = [
     {
         location: "Ciudad de México",
@@ -25,7 +25,7 @@ let tickets = [
     }
 ];
 
-let souldOut = 0
+document.getElementById('welcome').innerHTML = `¡Hola ${usuarioName}! <i class="fas fa-ticket-alt"></i> Bienvenido a nuestras fechas de tour.`;
 
 // solicita nombre y valido
 function solicitarNombre() {
@@ -41,20 +41,20 @@ function solicitarNombre() {
     return usuarioName.toUpperCase();
 }
 
-document.getElementById('welcome').innerHTML = `¡Hola ${usuarioName}! <i class="fas fa-ticket-alt"></i> Bienvenido a nuestras fechas de tour.`;
-
-
-// FUNCTION TOUR.JS
-
+// FUNCTION para TOUR.HTML
 const getTickets = (location) => {
     // Busco la ciudad en el array de tickets
     const city = tickets.find(ticket => ticket.location === location);
 
     city
-        ? (city.availableTickets > 0 
-            ? (city.availableTickets--, swal("Sold!", `You have tickets to the ${location} concert. Tickets left: ${city.availableTickets}`, "success")) 
-            : swal("Oh no!", `You are outta luck! There are no more tickets for the ${location} concert.`, "info"))
-        : swal("Error", `No se encontró el concierto en ${location}.`, "error");
+        ? (city.availableTickets > 0
+            ?
+            (city.availableTickets--,
+                swal("Sold!", `You have tickets to the ${location} concert. Tickets left: ${city.availableTickets}`, "success"))
+            :
+            swal("Oh no!", `You are outta luck! There are no more tickets for the ${location} concert.`, "info"))
+        :
+        swal("Error", `No se encontró el concierto en ${location}.`, "error");
 };
 
 
