@@ -40,13 +40,10 @@
             <nav>
                 <ul class="flex flex-col mt-4">
                     <div class="mt-4">
-                        <li class="py-2"><a href="#" class="text-indigo-800 hover:no-underline">Other Albums</a></li>
-                        <li class="py-2"><a href="#addAlbumIcon" class="text-indigo-800 hover:no-underline">Add
-                                Songs</a></li>
-                        <li class="py-2"><a href="./editAlbum.html" class="text-indigo-800 hover:no-underline">Edit
-                                Album</a></li>
-                        <li class="py-2"><a href="#tourDate" class="text-indigo-800 hover:no-underline">Tour Dates </a>
-                        </li>
+                        <li class="py-2"><a href="index.html" class="text-indigo-800 hover:no-underline">Other Albums</a></li>
+                        <li class="py-2"><a href="./AddSong.html" class="text-indigo-800 hover:no-underline">Add Songs</a></li>
+                        <li class="py-2"><a href="./editAlbum.html" class="text-indigo-800 hover:no-underline">Edit Album</a></li>
+                        <li class="py-2"><a href="#tourDate" class="text-indigo-800 hover:no-underline">Tour Dates </a></li>
                     </div>
 
                     <!-- Línea horizontal centrada -->
@@ -83,7 +80,8 @@
                             <span class="font-bold">
                                 12 de Marzo - Ciudad de México
                             </span>
-                            <button class="bg-indigo-600 text-white px-3 py-1 rounded-md">
+                            <button onclick="getTickets()" class="bg-indigo-600 text-white px-3 py-1 rounded-md">
+                             
                                 Sold out
                             </button>
                         </li>
@@ -91,7 +89,7 @@
                             <span class="font-bold">
                                 15 de Marzo - Guadalajara
                             </span>
-                            <button class="bg-indigo-600 text-white px-3 py-1 rounded-md">
+                            <button onclick="getTickets()" class="bg-indigo-600 text-white px-3 py-1 rounded-md">
                                 Sold out
                             </button>
                         </li>
@@ -99,7 +97,7 @@
                             <span class="font-bold">
                                 20 de Marzo - Monterrey
                             </span>
-                            <button class="bg-indigo-600 text-white px-3 py-1 rounded-md">
+                            <button onclick="getTickets()" class="bg-indigo-600 text-white px-3 py-1 rounded-md">
                                 Sold out
                             </button>
                         </li>
@@ -107,7 +105,7 @@
                             <span class="font-bold">
                                 25 de Marzo - Bogotá
                             </span>
-                            <button class="bg-indigo-600 text-white px-3 py-1 rounded-md">
+                            <button onclick="getTickets()" class="bg-indigo-600 text-white px-3 py-1 rounded-md">
                                 Sold out
                             </button>
                         </li>
@@ -115,7 +113,7 @@
                             <span class="font-bold">
                                 30 de Diciembre - Lima
                             </span>
-                            <button class="bg-indigo-600 text-white px-3 py-1 rounded-md">
+                            <button onclick="getTickets()" class="bg-indigo-600 text-white px-3 py-1 rounded-md">
                                 Ticket
                             </button>
                         </li>
@@ -129,6 +127,7 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
     <script src="tour.js"></script>
 </body>
 

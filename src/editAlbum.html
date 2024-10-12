@@ -44,7 +44,6 @@
                     <li class="py-2"><a href="index.html" class="text-indigo-800 hover:no-underline">Other Albums</a></li>
                     <li class="py-2"><a href="index.html" class="text-indigo-800 hover:no-underline">Add Songs</a></li>
                     <li class="py-2"><a href="./addSong.html" class="text-indigo-800 hover:no-underline">Add Songs</a></li>
-                    <li class="py-2"><a href="./editAlbum.html" class="text-indigo-800 hover:no-underline">Edit Album</a></li>
                     <!-- Línea horizontal centrada -->
                     <div class="flex justify-center items-center my-6">
                         <div class="w-[95%] h-[1px] bg-[#380a5636]"></div>
@@ -93,15 +92,17 @@
                     <div class="flex justify-between mt-6 space-x-4">
                         <!-- Botón de Eliminar con Icono -->
                         <button type="button"
-                            class="bg-red-600 text-white px-3 py-1 rounded-md flex items-center hover:bg-red-700 transition-colors">
+                            class="delete-album-btn bg-red-600 text-white px-3 py-1 rounded-md flex items-center hover:bg-red-700 transition-colors">
                             <i class="fas fa-trash mr-2"></i>
                             <p>Eliminar</p>
                         </button>
                         <!-- Botón de Cancelar con estilo Outlined -->
-                        <button type="button" onclick="window.location.href='./vista-album.html'"
-                            class="border-2 border-blue-600 text-blue-600 px-3 py-1 rounded-md flex items-center hover:bg-blue-50 transition-colors">
-                            <p>Cancelar</p>
-                        </button>
+                        <a href="index.html">
+                            <button type="button" onclick="window.location.href='./vista-album.html'"
+                                class="border-2 border-blue-600 text-blue-600 px-3 py-1 rounded-md flex items-center hover:bg-blue-50 transition-colors">
+                                <p>Cancelar</p>
+                            </button>
+                        </a>
                     </div>
                 </form>
             </div>
