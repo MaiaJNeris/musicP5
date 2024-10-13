@@ -8,3 +8,10 @@ html {
     font-size: 17px;
     color: rgb(0, 0, 0);
 }
+
+/* EJERCICIOS DE MODULO ARRAY, QUE SE PIDEN */
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}

@@ -1,7 +1,4 @@
-// Pedir el nombre usuario
-let usuarioName = solicitarNombre();
-
-//Venta ticket y location
+// Venta ticket y location
 let tickets = [
     {
         location: "Ciudad de México",
@@ -25,8 +22,6 @@ let tickets = [
     }
 ];
 
-document.getElementById('welcome').innerHTML = `¡Hola ${usuarioName}! <i class="fas fa-ticket-alt"></i> Bienvenido a nuestras fechas de tour.`;
-
 // solicita nombre y valido
 function solicitarNombre() {
     let usuarioName = prompt("¡Bienvenido/a! Por favor, ingresa tu nombre (mínimo 3 letras):");
@@ -37,9 +32,40 @@ function solicitarNombre() {
         usuarioName = prompt("¡Bienvenido/a! Por favor, ingresa tu nombre (mínimo 3 letras):");
     }
 
+    // Solicitar edad
+    const edad = prompt('¿Cuál es tu edad?');
+    // Verificar edad
+    if (edad < 18) {
+        swal("Error", "No tienes la edad suficiente para comprar tickets del evento", "error");
+        deshabilitarBotones();
+        cambiarEstiloBotones();
+    } else {
+        document.getElementById('welcome').innerHTML = `¡Hola ${usuarioName}! <i class="fas fa-ticket-alt"></i> Bienvenido a nuestras fechas de tour.`;
+    }
+
     // Nombre a mayúsculas y lo retorno
     return usuarioName.toUpperCase();
 }
+
+// Deshabilitar los botones de compra
+function deshabilitarBotones() {
+    const botones = document.querySelectorAll('.btn-ticket');
+    botones.forEach(boton => {
+        boton.disabled = true;
+    });
+}
+
+// Cambiar el estilo de los botones deshabilitados
+function cambiarEstiloBotones() {
+    const botones = document.querySelectorAll('.btn-ticket');
+    botones.forEach(boton => {
+        boton.style.backgroundColor = 'gray';  // Cambiar color a gris
+        boton.style.cursor = 'not-allowed';    // Cambiar cursor a "no permitido"
+    });
+}
+
+// Llamar a la función de solicitar el nombre
+let usuarioName = solicitarNombre();
 
 // FUNCTION para TOUR.HTML
 const getTickets = (location) => {
@@ -48,7 +74,7 @@ const getTickets = (location) => {
 
     city
         ? (city.availableTickets > 0
-            ?
+            ? 
             (city.availableTickets--,
                 swal("Sold!", `You have tickets to the ${location} concert. Tickets left: ${city.availableTickets}`, "success"))
             :
@@ -57,4 +83,6 @@ const getTickets = (location) => {
         swal("Error", `No se encontró el concierto en ${location}.`, "error");
 };
 
-
+// Cambiar el texto del título por consola
+const titulo = document.getElementById('titulo');
+titulo.textContent = "Nuevo Título desde la Consola";
